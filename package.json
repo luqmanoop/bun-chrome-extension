@@ -8,6 +8,7 @@
     "pack": "bun run config/pack.ts"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@types/adm-zip": "^0.5.5",
     "@types/bun": "latest",
     "@types/chrome": "^0.0.270",
