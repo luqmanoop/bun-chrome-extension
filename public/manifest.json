@@ -11,9 +11,9 @@
   },
   "action": {
     "default_title": "Extension action title",
-    "default_popup": "popup.html"
+    "default_popup": "popup/index.html"
   },
-  "options_page": "options.html",
+  "options_page": "options/index.html",
   "background": {
     "service_worker": "background.js"
   },
