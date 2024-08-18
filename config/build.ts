@@ -23,6 +23,7 @@ await $`rm -rf ${outdir}`;
 const ext = {
   html: ".html",
   png: ".png",
+  css: ".css",
 };
 
 await Bun.build({
@@ -38,18 +39,24 @@ await Bun.build({
 
 const glob = new Glob("**");
 
+const mainCssFile = Bun.file(`${publicFolder}/main.css`);
+
+if (!mainCssFile.exists()) throw new Error("main.css not found");
+
 for await (const filename of glob.scan(publicFolder)) {
   const file = Bun.file(`${publicFolder}/${filename}`);
 
   if (!file.exists()) throw new Error(`File ${filename} does not exist`);
 
-  if (filename.endsWith(ext.png)) continue;
+  if (filename.endsWith(ext.png) || filename.endsWith(ext.css)) continue;
 
   if (filename.endsWith(ext.html)) {
     const fileFolder = filename.replace(ext.html, "");
 
     // rename files to index.html since it's being copied into a folder that share its original name
     await $`cp ${file.name} ${outdir}/${fileFolder}/index.html`;
+    // copy the css file into the folder
+    await $`bun run css -- ${mainCssFile.name} -o ${outdir}/${fileFolder}/main.css`.quiet();
   } else {
     await $`cp ${file.name} ${outdir}`;
   }

@@ -1,11 +1,11 @@
 {
   "name": "bun-chrome-extension",
   "module": "index.ts",
-  "type": "module",
   "scripts": {
     "build": "bun run config/build.ts",
     "dev": "bun run config/watch.ts --dir=src,public",
-    "pack": "bun run config/pack.ts"
+    "pack": "bun run config/pack.ts",
+    "css": "postcss"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
@@ -14,7 +14,12 @@
     "@types/chrome": "^0.0.270",
     "@types/react-dom": "^18.3.0",
     "adm-zip": "^0.5.15",
-    "lefthook": "^1.7.14"
+    "autoprefixer": "^10.4.20",
+    "lefthook": "^1.7.14",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.4.10"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

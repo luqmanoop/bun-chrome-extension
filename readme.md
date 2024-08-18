@@ -10,7 +10,7 @@ Bun chrome extension is a starter template for developing chrome-extensions usin
 - [x] Popup & Options page built with React
 - [x] Lint & format with [BiomeJS](https://biomejs.dev/)
 - [x] Latest Manifest v3
-- [ ] TailwindCSS
+- [x] TailwindCSS
 
 Install dependencies:
 
