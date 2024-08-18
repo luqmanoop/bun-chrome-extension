@@ -1,0 +1,22 @@
+{
+  "name": "bun-chrome-extension",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run config/watch.ts --dir=src,public",
+    "build": "bun run config/build.ts",
+    "pack": "bun run config/pack.ts"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.5",
+    "@types/bun": "latest",
+    "@types/chrome": "^0.0.270",
+    "adm-zip": "^0.5.15"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "element-ready": "^7.0.0"
+  }
+}
