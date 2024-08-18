@@ -25,3 +25,7 @@ Package extension for publishing
 ```bash
 bun run pack
 ```
+
+## License
+
+This project is licensed under the [MIT](/license.md) License.
