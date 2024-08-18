@@ -2,7 +2,7 @@
 	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
 	"files": {
 		"include": ["src/**/*.ts"],
-		"ignore": ["build/**"]
+		"ignore": ["build/**", "config/**"]
 	},
 	"organizeImports": {
 		"enabled": true
