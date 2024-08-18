@@ -1,15 +1,27 @@
 # bun-chrome-extension
 
-To install dependencies:
+> Develop chrome extension with full TypeScript support using [Bun](https://bun.sh) 🐰
+
+Install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+Run:
 
 ```bash
-bun run index.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.1.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Build:
+
+```bash
+bun run build
+```
+
+Package extension for publishing
+
+```bash
+bun run pack
+```
