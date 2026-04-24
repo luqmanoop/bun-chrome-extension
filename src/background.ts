@@ -1,9 +1,9 @@
-// uncomment if you want options.html to be opened after extension is installed
+// uncomment if you want options/index.html to be opened after extension is installed
 /*
 chrome.runtime.onInstalled.addListener(async ({ reason }) => {
   if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
     chrome.tabs.create({
-      url: 'options.html',
+      url: 'options/index.html',
     });
   }
 });
